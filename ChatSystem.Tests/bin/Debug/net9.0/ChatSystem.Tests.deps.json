@@ -8,7 +8,11 @@
     ".NETCoreApp,Version=v9.0": {
       "ChatSystem.Tests/1.0.0": {
         "dependencies": {
-          "ChatSystem.Core": "1.0.0",
+          "ChatSystem.Application": "1.0.0",
+          "ChatSystem.Domain": "1.0.0",
+          "ChatSystem.Infrastructure": "1.0.0",
+          "ChatSystem.Presentation": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "9.0.0",
           "Microsoft.NET.Test.Sdk": "17.12.0",
           "Moq": "4.20.72",
           "NUnit": "4.2.2",
@@ -37,6 +41,25 @@
           "lib/netcoreapp3.1/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
             "assemblyVersion": "15.0.0.0",
             "fileVersion": "17.1200.524.48002"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/9.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.7"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.7": {
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.725.31616"
           }
         }
       },
@@ -337,7 +360,7 @@
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "6.0.0.0",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "6.0.21.52210"
           },
           "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll": {
             "rid": "win",
@@ -356,12 +379,49 @@
         }
       },
       "System.Reflection.Metadata/1.6.0": {},
-      "ChatSystem.Core/1.0.0": {
+      "ChatSystem.Application/1.0.0": {
         "dependencies": {
+          "ChatSystem.Domain": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.7",
           "System.Reactive": "6.0.1"
         },
         "runtime": {
-          "ChatSystem.Core.dll": {
+          "ChatSystem.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ChatSystem.Domain/1.0.0": {
+        "runtime": {
+          "ChatSystem.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ChatSystem.Infrastructure/1.0.0": {
+        "dependencies": {
+          "ChatSystem.Domain": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.7",
+          "System.Reactive": "6.0.1"
+        },
+        "runtime": {
+          "ChatSystem.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ChatSystem.Presentation/1.0.0": {
+        "dependencies": {
+          "ChatSystem.Application": "1.0.0",
+          "ChatSystem.Infrastructure": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.7",
+          "System.Reactive": "6.0.1"
+        },
+        "runtime": {
+          "ChatSystem.Presentation.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -395,6 +455,20 @@
       "sha512": "sha512-4svMznBd5JM21JIG2xZKGNanAHNXplxf/kQDFfLHXQ3OnpJkayRK/TjacFjA+EYmoyuNXHo/sOETEfcYtAzIrA==",
       "path": "microsoft.codecoverage/17.12.0",
       "hashPath": "microsoft.codecoverage.17.12.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MCPrg7v3QgNMr0vX4vzRXvkNGgLg8vKWX0nKCWUxu2uPyMsaRgiRc1tHBnbTcfJMhMKj2slE/j2M9oGkd25DNw==",
+      "path": "microsoft.extensions.dependencyinjection/9.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iPK1FxbGFr2Xb+4Y+dTYI8Gupu9pOi8I3JPuPsrogUmEhe2hzZ9LpCmolMEBhVDo2ikcSr7G5zYiwaapHSQTew==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/9.0.7",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.9.0.7.nupkg.sha512"
     },
     "Microsoft.NET.Test.Sdk/17.12.0": {
       "type": "package",
@@ -473,7 +547,22 @@
       "path": "system.reflection.metadata/1.6.0",
       "hashPath": "system.reflection.metadata.1.6.0.nupkg.sha512"
     },
-    "ChatSystem.Core/1.0.0": {
+    "ChatSystem.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ChatSystem.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ChatSystem.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ChatSystem.Presentation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

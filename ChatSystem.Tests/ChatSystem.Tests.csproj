@@ -1,28 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <LangVersion>latest</LangVersion>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <IsPackable>false</IsPackable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="coverlet.collector" Version="6.0.2" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
-    <PackageReference Include="Moq" Version="4.20.72" />
-    <PackageReference Include="NUnit" Version="4.2.2" />
-    <PackageReference Include="NUnit.Analyzers" Version="4.4.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="coverlet.collector" Version="6.0.2"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0"/>
+        <PackageReference Include="Moq" Version="4.20.72"/>
+        <PackageReference Include="NUnit" Version="4.2.2"/>
+        <PackageReference Include="NUnit.Analyzers" Version="4.4.0"/>
+        <PackageReference Include="NUnit3TestAdapter" Version="4.6.0"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ChatSystem.Core\ChatSystem.Core.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <Using Include="NUnit.Framework"/>
+        <Using Include="Microsoft.Extensions.DependencyInjection"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <Using Include="NUnit.Framework" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\ChatSystem.Domain\ChatSystem.Domain.csproj"/>
+        <ProjectReference Include="..\ChatSystem.Application\ChatSystem.Application.csproj"/>
+        <ProjectReference Include="..\ChatSystem.Infrastructure\ChatSystem.Infrastructure.csproj"/>
+        <ProjectReference Include="..\ChatSystem.Presentation\ChatSystem.Presentation.csproj"/>
+    </ItemGroup>
 
 </Project>
